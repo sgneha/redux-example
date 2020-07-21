@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Posts from "./components/Posts";
+import PostForm from "./components/Postform";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -20,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <PostForm />
+      <hr></hr>
       <Posts />
     </div>
   );
