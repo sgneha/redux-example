@@ -4,7 +4,7 @@ import { fetchPosts } from "../actions/postActions";
 
 class Posts extends Component {
   componentWillMount() {
-    this.props.fetchPosts();
+    this.props.fetchPosts(); //to call action
   }
   render() {
     const postItems = this.props.posts.map((post) => (
@@ -21,6 +21,6 @@ class Posts extends Component {
     );
   }
 }
-
-const mapStateToProps = (state) => ({ posts: state.posts.items });
-export default connect(mapStateToProps, { fetchPosts })(Posts);
+//get new items from the state.will get state from redux and map properties to the components
+const mapStateToProps = (state) => ({ posts: state.posts.items }); //first posts is property of component and 2nd post is postReducer
+export default connect(mapStateToProps, { fetchPosts })(Posts); //'Posts' is component

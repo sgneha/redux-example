@@ -9,6 +9,7 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_POSTS:
       return {
+        //returning the items that have been fetched
         ...state,
         items: action.payload,
       };
