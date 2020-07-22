@@ -13,6 +13,13 @@ export default function (state = initialState, action) {
         ...state,
         items: action.payload,
       };
+    case NEW_POST:
+      return {
+        //new post has been dispatched from action
+        //returning the new single item only and push that onto post property inside the post component
+        ...state,
+        item: action.payload,
+      };
     default:
       return state;
   }
